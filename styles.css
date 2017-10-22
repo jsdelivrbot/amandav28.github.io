@@ -3,6 +3,17 @@ img {
 }
 body {
     text-align: center;
-    font-family: "Arial";
+    font-family: "tahoma"
+    }
+p{
+    color: grey
+    }
+h1 {
+    color: grey
 }
-background: url('https://s-media-cache-ak0.pinimg.com/736x/4a/47/cf/4a47cf9e48340e400f69afdbd87378d3.jpg');
+div {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/736x/44/f3/ed/44f3ed6f2d1f2a6a3fe82ee58a045134.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box }
+    }
