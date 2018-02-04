@@ -55,10 +55,12 @@ function gameOver(){
     text("Click anywhere to try again", width / 2, 3  *height / 4);
 }
 
-function mouseClicked() {
-     isGameover = false;
+mouseClicked = function () {
+    if (isGameOver){
+     isGameOver = false;
      player.position.x = width / 2;
      player.position.y = height - (playerImage.height / 2);
      enemy.position.x = width / 2;
      enemy.position.y = 0;
+    }
 }
