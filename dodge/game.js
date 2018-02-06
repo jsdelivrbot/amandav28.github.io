@@ -129,6 +129,8 @@ function draw () {
     
     score = score +1;
     textAlign(CENTER);
+    fill("white");
+    text("Score", width/2, height-470);
     text(score, width/2, height-455);
     }
 }
