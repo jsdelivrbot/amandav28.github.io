@@ -18,10 +18,10 @@ var masteringImage;
 function preload(){
     playerImage = loadImage("https://i.imgur.com/ZWtwGt6.png?3");
     responsibilitiesImage= loadImage("https://i.imgur.com/WLlPM85.png?4");
-    homeworkImage = loadImage("https://i.imgur.com/WLlPM85.png?3");
+    homeworkImage = loadImage("https://i.imgur.com/uYpWIBH.png?2");
     essayImage = loadImage("https://i.imgur.com/KC3xpJ9.png?1");
     summerImage = loadImage("https://i.imgur.com/p6k5vLX.png?1");
-    masteringImage = loadImage("https://i.imgur.com/qzpfts6.png?2");
+    masteringImage = loadImage("https://i.imgur.com/7G67xvI.png?3");
     backgroundImage =loadImage("https://i.imgur.com/SuD5BBT.jpg?2");
 }
 
@@ -74,13 +74,12 @@ function draw () {
     background(backgroundImage);
     
     if (keyDown(RIGHT_ARROW) && player.position.x < (width - (playerImage.width / 2))) {
-     player.position.x += 4;
+        player.position.x += 4;
     }
     
     if (keyDown(LEFT_ARROW) && player.position.x > (playerImage.width / 2)) {
         player.position.x -= 4;
     }
-    
     if (keyDown(UP_ARROW) && player.position.y > (0 + (playerImage.height / 2))) {
         player.position.y -= 4;
     }
