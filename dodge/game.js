@@ -1,4 +1,5 @@
 var isGameOver;
+var score;
 var player;
 var playerImage;
 var homework;
@@ -13,6 +14,7 @@ var summerImage;
 var mastering;
 var masteringImage;
 
+
 function preload(){
     playerImage = loadImage("https://i.imgur.com/ZWtwGt6.png?3");
     responsibilitiesImage= loadImage("https://i.imgur.com/WLlPM85.png?4");
@@ -25,7 +27,8 @@ function preload(){
 
 function setup() {
     isGameOver = false;
-    createCanvas(400, 400);
+    score = 0;
+    createCanvas(500, 500);
     player = createSprite(width / 2, height - (playerImage.height / 2), 0, 0);
     player.addImage(playerImage);
     homework = createSprite(width / 2, 0, 0, 0);
@@ -122,6 +125,10 @@ function draw () {
     }
     
     drawSprites();
+    
+    score = score +1;
+    textAlign(CENTER);
+    text(score, width/2, height-455);
     }
 }
 
@@ -129,12 +136,14 @@ function gameOver(){
     background(0);
     textAlign(CENTER);
     fill("white");
-    text("Game Over!", width / 2, height / 2);
+    text("You didn't pass!", width / 2, height / 2);
+    text ("Your score was: " + score, width/2, 20+height/2);
     text("Click anywhere to try again", width / 2, 3  *height / 4);
 }
 
 mouseClicked = function () {
     if (isGameOver){
+    score = 0;
      isGameOver = false;
      player.position.x = width / 2;
      player.position.y = height - (playerImage.height / 2);
