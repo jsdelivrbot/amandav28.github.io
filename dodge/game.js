@@ -82,7 +82,7 @@ function draw () {
         player.position.y -= 4;
     }
     
-    if (keyDown(DOWN_ARROW) && player.position.y > (height - (playerImage.height / 2))) {
+    if (keyDown(DOWN_ARROW) && player.position.y < (height - (playerImage.height / 2))) {
         player.position.y += 4;
     }
     
