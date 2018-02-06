@@ -33,21 +33,23 @@ function setup() {
     player.addImage(playerImage);
     homework = createSprite(width / 2, 0, 0, 0);
     homework.addImage(homeworkImage);
-    homework.rotationSpeed = 5.5;
+    homework.rotationSpeed = random(0, 8);
     homework.position.x = random(5, width-5);
     responsibilities = createSprite(width / 2, 0, 0, 0);
     responsibilities.addImage(responsibilitiesImage);
+    responsibilities.rotationSpeed = random(0, 15)
     responsibilities.position.x = random(5, width-5);
     essay = createSprite(width / 2, 0, 0, 0);
     essay.addImage(essayImage);
-    essay.rotationSpeed = 6.0;
+    essay.rotationSpeed = random(3, 12.0);
     essay.position.x = random(5, width-5);
     summer = createSprite(width / 2, 0, 0, 0);
     summer.addImage(summerImage);
-    summer.rotationSpeed = 5.3;
+    summer.rotationSpeed = random(0, 5.3);
     summer.position.x = random(5, width-5);
     mastering = createSprite(width / 2, 0, 0, 0);
     mastering.addImage(masteringImage);
+    mastering.rotationSpeed = random(0, 7)
     mastering.position.x = random(5, width-5);
 }
 
@@ -88,21 +90,21 @@ function draw () {
         player.position.y += 4;
     }
     
-    homework.position.y = homework.position.y + 3;
+    homework.position.y = homework.position.y + 4;
     
     if (homework.position.y > height) {
         homework.position.y = 0;
         homework.position.x=random(5, width-5);
     }
     
-    responsibilities.position.y = responsibilities.position.y +3;
+    responsibilities.position.y = responsibilities.position.y +6;
     
     if (responsibilities.position.y > height) {
         responsibilities.position.y = 0;
         responsibilities.position.x = random (5, width-5);
     }
     
-    essay.position.y = essay.position.y + 3;
+    essay.position.y = essay.position.y + 12;
     
     if (essay.position.y > height) {
         essay.position.y = 0;
@@ -116,7 +118,7 @@ function draw () {
         mastering.position.x=random(5, width-5);
     }
     
-    summer.position.y = summer.position.y + 3;
+    summer.position.y = summer.position.y + 8;
     
     if (summer.position.y > height) {
         summer.position.y = 0;
