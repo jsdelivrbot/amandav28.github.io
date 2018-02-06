@@ -20,7 +20,7 @@ function preload(){
     essayImage = loadImage("https://i.imgur.com/KC3xpJ9.png?1");
     summerImage = loadImage("https://i.imgur.com/p6k5vLX.png?1");
     masteringImage = loadImage("https://i.imgur.com/qzpfts6.png?2");
-    backgroundImage =loadImage("https://i.imgur.com/SuD5BBT.jpg?1");
+    backgroundImage =loadImage("https://i.imgur.com/SuD5BBT.jpg?2");
 }
 
 function setup() {
