@@ -151,7 +151,7 @@ function gameOver(){
     if (score >= 700 && score < 850){
         text("You passed with a B average!", width/2, height/2);
     }
-    if (score >= 850) {
+    if (score >= 850 && score < 1000) {
         text ("You passed with an A average! Congraduations!", width/2, height/2)
     }
     if (score >= 1000) {
