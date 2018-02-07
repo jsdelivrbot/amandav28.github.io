@@ -45,9 +45,14 @@ function draw() {
         player.position.y = (height - 50) - (player.height/2);
     }
     
+    if (player.position.y < player.height/2) {
+        player.velocity.y = GRAVITY;
+    }else{
     if (keyDown(UP_ARROW)) {
         player.velocity.y = JUMP;
+        }
     }
+    
     player.position.x = player.position.x + 5;
     camera.position.x = player.position.x + (width/4);
     var firstGroundSprite = groundSprites [0];
