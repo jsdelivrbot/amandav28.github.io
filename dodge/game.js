@@ -90,35 +90,35 @@ function draw () {
         player.position.y += 4;
     }
     
-    homework.position.y = homework.position.y + 4;
+    homework.position.y = homework.position.y + 3;
     
     if (homework.position.y > height) {
         homework.position.y = 0;
         homework.position.x=random(5, width-5);
     }
     
-    responsibilities.position.y = responsibilities.position.y +6;
+    responsibilities.position.y = responsibilities.position.y +4;
     
     if (responsibilities.position.y > height) {
         responsibilities.position.y = 0;
         responsibilities.position.x = random (5, width-5);
     }
     
-    essay.position.y = essay.position.y + 12;
+    essay.position.y = essay.position.y + 6;
     
     if (essay.position.y > height) {
         essay.position.y = 0;
         essay.position.x=random(5, width-5);
     }
     
-    mastering.position.y = mastering.position.y + 3;
+    mastering.position.y = mastering.position.y + 1.5;
     
     if (mastering.position.y > height) {
         mastering.position.y = 0;
         mastering.position.x=random(5, width-5);
     }
     
-    summer.position.y = summer.position.y + 8;
+    summer.position.y = summer.position.y + 3.5;
     
     if (summer.position.y > height) {
         summer.position.y = 0;
