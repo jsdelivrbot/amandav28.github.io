@@ -75,7 +75,7 @@ function draw() {
     player.position.x = player.position.x + 5;
     camera.position.x = player.position.x + (width/4);
     var firstGroundSprite = groundSprites [0];
-    if (firstGroundSprite.position.x <= camera.position.x - (width/2 + firstGroundSprite.width/2)){
+    if (firstGroundSprite.position.x <= camera.position.x - (width/2 + (2+firstGroundSprite.width/2))){
         groundSprites.remove(firstGroundSprite);
         firstGroundSprite.position.x = firstGroundSprite.position.x + numGroundSprites*firstGroundSprite.width;
         groundSprites.add(firstGroundSprite);                                                                                                              
