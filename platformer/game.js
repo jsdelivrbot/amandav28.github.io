@@ -10,24 +10,31 @@ var obstacleSprites;
 var obstacleSpritesImage;
 var isGameOver;
 var score;
-var backgroundImage;
+var groundSprite;
+var obstacle;
+var obstacleAnimation;
+var fireleftImage;
+var firerightImage;
+var groundSpriteImage
 
 function preload() {
     playerImage = loadImage("https://i.imgur.com/b5ILYwg.png?1");
-    obstacleSpritesImage = loadImage("https://i.imgur.com/75sVVyD.png?1");
+    fireleftImage = loadImage("https://i.imgur.com/75sVVyD.png?1");
+    firerightImage = loadImage("https://i.imgur.com/yMbSx4s.png?1")
+    groundSpriteImage = loadImage("https://i.imgur.com/mqq2oMB.png");
 }
 
 function setup() {
     isGameOver = false;
     score = 0;
     createCanvas (500,400);
-    background(150, 200, 250);
-    
+    background (150, 200, 250);
     groundSprites = new Group ();
     
     numGroundSprites = width/GROUND_SPRITE_WIDTH + 1;
     for (var n = 0; n < numGroundSprites; n++) {
-        var groundSprite = createSprite (n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
+        groundSprite = createSprite (n*50, height-25, GROUND_SPRITE_WIDTH, GROUND_SPRITE_HEIGHT);
+        groundSprite.addImage(groundSpriteImage);
         groundSprites.add(groundSprite);
     }
     
@@ -35,6 +42,7 @@ function setup() {
     player.addImage(playerImage);
     
     obstacleSprites = new Group();
+    
 }
 
 function draw() {
@@ -48,6 +56,7 @@ function draw() {
     } else {
     
     background(150, 200, 250);
+    
     player.velocity.y = player.velocity.y + GRAVITY;
     
     if (groundSprites.overlap(player)) {
@@ -73,8 +82,8 @@ function draw() {
     }
     
     if (random() > .96) {
-        var obstacle = createSprite(camera.position.x + width, random (0, (height-50) - 15), 30, 30);
-        obstacle.addImage(obstacleSpritesImage);
+        obstacle = createSprite(camera.position.x + width, random (0, (height-50) - 15), 30, 30);
+        obstacle.addAnimation("flickering", fireleftImage, firerightImage);
         obstacleSprites.add(obstacle);
         }
         
@@ -83,6 +92,8 @@ function draw() {
         removeSprite(firstObstacle);
     }
     obstacleSprites.overlap(player, endGame);
+    
+   
     
     drawSprites();
     
