@@ -15,7 +15,6 @@ var backgroundImage;
 function preload() {
     playerImage = loadImage("https://i.imgur.com/b5ILYwg.png?1");
     obstacleSpritesImage = loadImage("https://i.imgur.com/75sVVyD.png?1");
-    backgroundImage = loadImage("https://i.imgur.com/OJO2aXJ.png?1");
 }
 
 function setup() {
