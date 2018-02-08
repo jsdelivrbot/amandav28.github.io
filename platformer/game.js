@@ -5,15 +5,25 @@ var GROUND_SPRITE_WIDTH = 50;
 var GROUND_SPRITE_HEIGHT = 50;
 var numGroundSprites;
 var player;
+var playerImage;
 var obstacleSprites;
+var obstacleSpritesImage;
 var isGameOver;
 var score;
+var backgroundImage;
+
+function preload() {
+    playerImage = loadImage("https://i.imgur.com/b5ILYwg.png?1");
+    obstacleSpritesImage = loadImage("https://i.imgur.com/75sVVyD.png?1");
+    backgroundImage = loadImage("https://i.imgur.com/OJO2aXJ.png?1");
+}
 
 function setup() {
     isGameOver = false;
     score = 0;
-    createCanvas (400,300);
+    createCanvas (500,400);
     background(150, 200, 250);
+    
     groundSprites = new Group ();
     
     numGroundSprites = width/GROUND_SPRITE_WIDTH + 1;
@@ -22,7 +32,8 @@ function setup() {
         groundSprites.add(groundSprite);
     }
     
-    player = createSprite (100, height-75, 50, 50);
+    player = createSprite(100, height -50, 0, 0);
+    player.addImage(playerImage);
     
     obstacleSprites = new Group();
 }
@@ -62,8 +73,9 @@ function draw() {
         groundSprites.add(firstGroundSprite);                                                                                                              
     }
     
-    if (random() > .97) {
+    if (random() > .96) {
         var obstacle = createSprite(camera.position.x + width, random (0, (height-50) - 15), 30, 30);
+        obstacle.addImage(obstacleSpritesImage);
         obstacleSprites.add(obstacle);
         }
         
