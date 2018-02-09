@@ -90,14 +90,14 @@ function draw () {
         player.position.y += 4;
     }
     
-    homework.position.y = homework.position.y + 3;
+    homework.position.y = homework.position.y + 15;
     
     if (homework.position.y > height) {
         homework.position.y = 0;
         homework.position.x=random(5, width-5);
     }
     
-    responsibilities.position.y = responsibilities.position.y +4;
+    responsibilities.position.y = responsibilities.position.y +15;
     
     if (responsibilities.position.y > height) {
         responsibilities.position.y = 0;
