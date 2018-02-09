@@ -17,11 +17,11 @@ var masteringImage;
 
 function preload(){
     playerImage = loadImage("https://i.imgur.com/ZWtwGt6.png?3");
-    responsibilitiesImage= loadImage("https://i.imgur.com/WLlPM85.png?4");
-    homeworkImage = loadImage("https://i.imgur.com/uYpWIBH.png?2");
-    essayImage = loadImage("https://i.imgur.com/KC3xpJ9.png?2");
-    summerImage = loadImage("https://i.imgur.com/p6k5vLX.png?1");
-    masteringImage = loadImage("https://i.imgur.com/7G67xvI.png?3");
+    responsibilitiesImage= loadImage("https://i.imgur.com/WLlPM85.png?5");
+    homeworkImage = loadImage("https://i.imgur.com/uYpWIBH.png?3");
+    essayImage = loadImage("https://i.imgur.com/KC3xpJ9.png?3");
+    summerImage = loadImage("https://i.imgur.com/p6k5vLX.png?2");
+    masteringImage = loadImage("https://i.imgur.com/7G67xvI.png?4");
     backgroundImage =loadImage("https://i.imgur.com/SuD5BBT.jpg?2");
 }
 
@@ -90,14 +90,14 @@ function draw () {
         player.position.y += 4;
     }
     
-    homework.position.y = homework.position.y + 15;
+    homework.position.y = homework.position.y + 4;
     
     if (homework.position.y > height) {
         homework.position.y = 0;
         homework.position.x=random(5, width-5);
     }
     
-    responsibilities.position.y = responsibilities.position.y +15;
+    responsibilities.position.y = responsibilities.position.y +5;
     
     if (responsibilities.position.y > height) {
         responsibilities.position.y = 0;
