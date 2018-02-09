@@ -139,22 +139,22 @@ function gameOver(){
     background(0);
     textAlign(CENTER);
     fill("white");
-    if (score <= 400){
+    if (score <= 500){
         text("You didn't pass!", width/2, height/2);
     }
-    if (score >= 400 && score < 550) {
+    if (score >= 500 && score < 650) {
         text("You passed with a D average!", width/2, height/2);
     }
-    if (score >= 550 && score < 700) {
+    if (score >= 650 && score < 800) {
         text ("You passed with a C average!", width/2, height/2);
     }
-    if (score >= 700 && score < 850){
+    if (score >= 800 && score < 950){
         text("You passed with a B average!", width/2, height/2);
     }
-    if (score >= 850 && score < 1000) {
+    if (score >= 950 && score < 1100) {
         text ("You passed with an A average! Congraduations!", width/2, height/2)
     }
-    if (score >= 1000) {
+    if (score >= 1100) {
     text ("Congraduations! You got an A+!!", width/2, height/2)
     }
     text ("Your score was: " + score, width/2, 20+height/2);
