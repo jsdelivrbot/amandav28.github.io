@@ -104,7 +104,7 @@ function draw () {
         responsibilities.position.x = random (5, width-5);
     }
     
-    essay.position.y = essay.position.y + 6;
+    essay.position.y = essay.position.y + 5;
     
     if (essay.position.y > height) {
         essay.position.y = 0;

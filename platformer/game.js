@@ -81,7 +81,7 @@ function draw() {
         groundSprites.add(firstGroundSprite);                                                                                                              
     }
     
-    if (random() > .96) {
+    if (random() > .97) {
         obstacle = createSprite(camera.position.x + width, random (0, (height-50) - 15), 30, 30);
         obstacle.addAnimation("flickering", fireleftImage, firerightImage);
         obstacleSprites.add(obstacle);
