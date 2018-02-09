@@ -19,7 +19,7 @@ function preload(){
     playerImage = loadImage("https://i.imgur.com/ZWtwGt6.png?3");
     responsibilitiesImage= loadImage("https://i.imgur.com/WLlPM85.png?4");
     homeworkImage = loadImage("https://i.imgur.com/uYpWIBH.png?2");
-    essayImage = loadImage("https://i.imgur.com/KC3xpJ9.png?1");
+    essayImage = loadImage("https://i.imgur.com/KC3xpJ9.png?2");
     summerImage = loadImage("https://i.imgur.com/p6k5vLX.png?1");
     masteringImage = loadImage("https://i.imgur.com/7G67xvI.png?3");
     backgroundImage =loadImage("https://i.imgur.com/SuD5BBT.jpg?2");
